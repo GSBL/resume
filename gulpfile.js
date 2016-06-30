@@ -1,6 +1,6 @@
 var gulp = require('gulp');
 var plugins = require('gulp-load-plugins')();
-
+var livereload = require('gulp-livereload');
 var path = require('path');
 var gls = require('gulp-live-server');
 
@@ -75,13 +75,17 @@ gulp.task('static', function() {
 
 /****************** Watch ****************/
 gulp.task('watch', ['server'], function() {
-  gulp.watch(['./src/**/*.jade', './resume.json', './i18n/**/*.js'],
-             ['jade']);
-  gulp.watch('./static/**/*', ['static']);
-  gulp.watch('./src/**/*.less', ['less-debug']);
-  gulp.watch('./dist/**/*', function() {
-    server.notify.apply(server, arguments);
-  });
+  var server = livereload();
+  gulp.watch('./', function (file) {
+        server.changed(file.path);
+    });
+  // gulp.watch(['./src/**/*.jade', './resume.json', './i18n/**/*.js'],
+  //            ['jade']);
+  // gulp.watch('./static/**/*', ['static']);
+  // gulp.watch('./src/**/*.less', ['less-debug']);
+  // gulp.watch('./dist/**/*', function() {
+  //   server.notify.apply(server, arguments);
+  // });
 });
 
 /****************** Build ****************/
