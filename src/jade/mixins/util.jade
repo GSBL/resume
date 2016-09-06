@@ -11,7 +11,7 @@ mixin sinaweibo(data)
 
 mixin github(data)
   li.contact-github&attributes(attributes)
-    a(href="https://github.com/" + data.id)= "https://github.com/" + data.id
+    a(href="https://github.com/" + data.id target="blank")= "https://github.com/" + data.id
 
 mixin blog(data)
   li.contact-blog&attributes(attributes)

@@ -11,13 +11,11 @@
     "email": "2602140596@qq.com",
     "wechat": {
       "id": "gaisibeilei001",
-      "qrcode": "static/wechat.svg"
+      "qrcode": "static/huangtinghui.jpg"
     },
+    "phone": "15623923961",
     "github": {
       "id": "GSBL"
-    },
-    "blog": {
-      "url": "http://xxx"
     }
   },
   "links": [],
@@ -35,13 +33,13 @@
     {
       "type": "internship",
       "techtype": "wap",
-      "place": "今日头条 Uesr Growth",
+      "place": "今日头条 User Growth",
       "start": "2015.07",
       "end": "2016.07",
-      "name": "Wap站开发",
+      "name": "Wap站负责人",
       "description": [
         "开发并维护今日头条的`wap站`",
-        "`wap站`包括列表页，详情页，回流页，sem落地页"
+        "wap站包括`列表页`、`详情页`、`定制页`、`sem落地页`"
       ],
       "stack": []
     },
@@ -53,10 +51,9 @@
       "source": "",
       "demo": "http://m.toutiao.com",
       "description": [
-        "开发动态缩放方案--`responsive.js`解决`物理1px`、`chrome 12px限制`、`设计图高度还原`等问题，当然也引出了`font-boosting`等问题，目前已经在wap站各个项目中使用",
-        "从各种方法中选择`inline-block`方案处理图片垂直居中问题",
-        "z-index",
-        "放弃`dotdot.js`使用`webkit-line-clamp`实现多段文字末尾'`...`'效果"
+        "开发`移动适配方案`，解决`物理1px`、`chrome 12px限制`、`设计图高度还原`等问题，不过也引出了`font-boosting`等问题，目前推广到wap站各个项目中",
+        "选择inline-block+vertical-align方案处理`图片垂直居中`问题",
+        "改用webkit-line-clamp实现`多段文字`末尾省略号`...`效果"
       ],
       "stack": []
     },
@@ -68,8 +65,10 @@
       "source": "",
       "demo": "",
       "description": [
-        "统一代码规范、梳理整站逻辑、删除冗余代码、使用奇巧淫计",
-        "用zepto 替换jquery，发现两者在实现`data()`等方法上的不同，并由此探讨了两者的其他差异"
+        "统一代码规范、梳理整站逻辑、删除冗余代码、`优化CSS`",
+        "用`zepto`替换`jquery`，发现两者在实现data()上的不同，并由此研究了两者的其他api的差异",
+        "引入gtm管理支线代码逻辑，提高了`可维护性`",
+        "使用postmessege处理定制页`跨域通信`"
       ],
       "stack": []
     },
@@ -81,10 +80,9 @@
       "source": "",
       "demo": "",
       "description": [
-        "优化`fis`配置，合理打包文件，压缩图片",
-        "调整js位置，`按需加载js`",
-        "将整个网页内容`异步返回`，减少了`80ms`首次响应时间",
-        "模块化"
+        "优化`fis`配置，合理打包文件，压缩图片，选着合适图片格式",
+        "将整个网页内容`异步返回`，首次响应只返回主体结构和占位图，减少了`80ms`首次响应时间",
+        "调整js位置，`按需加载js`"
       ],
       "stack": []
     },
@@ -96,24 +94,9 @@
       "source": "",
       "demo": "",
       "description": [
-        "优化`fis`配置，合理打包文件，压缩图片",
-        "调整js位置，`按需加载js`",
-        "将整个网页内容`异步返回`，减少了`80ms`首次响应时间",
-        "模块化"
-      ],
-      "stack": []
-    },
-    {
-      "type": "project",
-      "techtype": "frontend",
-      "project_type": "personal",
-      "name": "gtm控制wap站",
-      "source": "",
-      "demo": "",
-      "description": [
-        "方便Wap站根据不同合作方要求，调整模块的功能（显示、隐藏、点击后的触发逻辑等）",
-        "减少以上逻辑污染Wap站前端主线代码，`提高可维护性`",
-        "广告素材的展示后台"
+        "基于zepto开发一个支持wap端的视频播放控件",
+        "加深了对`面向对象编程`的理解，并觉察到其缺点",
+        "学习了`视频直播`原理"
       ],
       "stack": []
     }
@@ -123,33 +106,41 @@
       "type": "frontend",
       "item": [
         {
-          "summary": "`HTML` / `CSS`",
+          "summary": "HTML / CSS",
           "description": [
-            "能够编写语义化的 `HTML`，模块化的 `CSS`，实现较复杂的布局与动画",
-            "熟悉已标准化的 `HTML5` / `CSS3` 新特性，实验项目中能尝试使用未广泛实现的新标准"
+            "能够编写`语义化`、符合`SEO`的HTML，用CSS实现`较复杂`的布局",
+            "熟悉已标准化的 `HTML5` / `CSS3` 新特性"
           ]
         },
         {
-          "summary": "`ECMAScript`（`JavaScript`）",
+          "summary": "JavaScript",
           "description": [
-            "掌握 `ECMAScript`（`JavaScript`）"
+            "掌握 `ECMAScript`",
+            "掌握原生 `DOM` 的使用及相关标准"
           ]
         },
         {
-          "summary": "`DOM`及常见 `Web API`",
+          "summary": "web缓存",
           "description": [
-            "熟悉原生 `DOM` 的使用及相关标准（W3C / WHATWG），有桌面 / 移动端前端组件的开发经验"
+            "掌握web缓存工作原理，熟练使用`http头部`控制缓存"
           ]
         },
         {
-          "summary": "前端工程实践",
+          "summary": "浏览器工作原理",
           "description": [
-            "使用 `Vue` 编写",
-            "熟悉 `jQuery` / `zepto` 的使用、定制与扩展, 阅读过部分源代码",
-            "在项目中使用过`模块化`解决方案",
-            "在项目中使用过 `Less` 等预处理处理工具",
-            "日常使用 `fis`改进工作流",
-            "掌握基本的前端兼容性处理、`性能优化知识与技巧`，并能在项目中加以实践"
+            "熟悉`HTML / CSS解析，DOM树构建，渲染树构建，布局，绘制`流程"
+          ]
+        },
+        {
+          "summary": "web安全",
+          "description": [
+            "具备基本的web安全知识（`XSS` / `CSRF` 等）"
+          ]
+        },
+        {
+          "summary": "网络通信",
+          "description": [
+            "熟悉`SSE` / `WebSockit`"
           ]
         }
       ]
@@ -157,10 +148,10 @@
     {
       "type": "miscellaneous",
       "item": [
+        "熟悉vwo等`A / B test`工具",
         "一年 `Linux` 使用经验，熟悉常用命令与配置",
-        "具备基本的 `Web 安全`知识（`XSS` / `CSRF` 等）",
-        "日常使用 `Git` 与 `Sublime Text`进行开发，也乐于尝试新工具",
-        "能够使用 `Photoshop` 完成简单的设计"
+        "日常使用 `git` 与 `sublime text`进行开发，也乐于尝试新工具",
+        "能够使用 `photoshop` 完成简单的设计"
       ]
     }
   ]
